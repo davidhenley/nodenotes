@@ -1,0 +1,19 @@
+{
+  "name": "notes",
+  "version": "1.0.0",
+  "description": "Notes app written in Node.JS",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidhenley/nodenotes.git"
+  },
+  "author": "David Henley",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/davidhenley/nodenotes/issues"
+  },
+  "homepage": "https://github.com/davidhenley/nodenotes#readme"
+}
