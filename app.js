@@ -1,5 +1,3 @@
-// console.log('Starting app.js');
-
 const fs = require('fs');
 const _ = require('lodash');
 const yargs = require('yargs');
@@ -7,8 +5,7 @@ const yargs = require('yargs');
 const notes = require('./notes');
 
 const { argv } = yargs;
-const command = process.argv[2];
-console.log('Yargs:', argv);
+const command = argv._[0];
 
 switch (command) {
   case 'add':
@@ -17,7 +14,7 @@ switch (command) {
   case 'list':
     notes.list();
     break;
-  case 'read':
+  case 'get':
     notes.get(argv.title);
     break;
   case 'remove':

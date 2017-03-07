@@ -1,7 +1,5 @@
-// console.log('Starting notes.js');
-
 const add = (title, body) => {
-  console.log('Adding note', title, body);
+  console.log('Adding note:', title, body);
 };
 
 const list = () => {
@@ -9,16 +7,13 @@ const list = () => {
 };
 
 const get = (title) => {
-  console.log('Reading note', title);
+  console.log('Getting note:', title);
 };
 
 const remove = (title) => {
-  console.log('Removing note', title);
+  console.log('Removing note:', title);
 };
 
 module.exports = {
-  add,
-  list,
-  get,
-  remove
+  add, list, get, remove
 };
