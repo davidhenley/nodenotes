@@ -42,6 +42,10 @@ const add = (title, body) => {
 
 const list = () => {
   let notes = fetchNotes();
+  if (notes.length === 0) {
+    console.log('No notes.');
+    return;
+  }
   notes.map(note => logNote(note));
 };
 
