@@ -12,16 +12,16 @@ console.log('Yargs:', argv);
 
 switch (command) {
   case 'add':
-    notes.addNote(argv.title, argv.body);
+    notes.add(argv.title, argv.body);
     break;
   case 'list':
-    console.log('Listing all notes');
+    notes.list();
     break;
   case 'read':
-    console.log('Reading individual note');
+    notes.get(argv.title);
     break;
   case 'remove':
-    console.log('Removing note');
+    notes.remove(argv.title);
     break;
   default:
     console.log('Command not recognized');

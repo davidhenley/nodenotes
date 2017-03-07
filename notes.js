@@ -1,9 +1,24 @@
 // console.log('Starting notes.js');
 
-const addNote = (title, body) => {
+const add = (title, body) => {
   console.log('Adding note', title, body);
 };
 
+const list = () => {
+  console.log('Getting all notes');
+};
+
+const get = (title) => {
+  console.log('Reading note', title);
+};
+
+const remove = (title) => {
+  console.log('Removing note', title);
+};
+
 module.exports = {
-  addNote
+  add,
+  list,
+  get,
+  remove
 };
