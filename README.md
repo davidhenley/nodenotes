@@ -1,3 +1,3 @@
 # Node Notes
 
-Notes app written in Node.JS
+Notes CLI app written in Node.JS

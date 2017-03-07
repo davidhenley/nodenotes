@@ -6,7 +6,6 @@ const _ = require('lodash');
 const notes = require('./notes');
 
 const command = process.argv[2];
-console.log('Command:', command);
 
 switch (command) {
   case 'add':
