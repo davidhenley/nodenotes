@@ -1,13 +1,23 @@
 const fs = require('fs');
 
-const add = (title, body) => {
+// Helpers
+const fetchNotes = () => {
   let notes;
   try {
     notes = JSON.parse(fs.readFileSync('notes-data.json'));
   } catch (e) {
     notes = [];
   }
+  return notes;
+};
 
+const saveNotes = (notes) => {
+  fs.writeFileSync('notes-data.json', JSON.stringify(notes));
+};
+
+// Exports
+const add = (title, body) => {
+  let notes = fetchNotes();
   const note = {
     title, body
   };
@@ -19,7 +29,11 @@ const add = (title, body) => {
   }
 
   notes.push(note);
-  fs.writeFileSync('notes-data.json', JSON.stringify(notes));
+  saveNotes(notes);
+  console.log('Note added!');
+  console.log('--');
+  console.log(`Title: ${title}`);
+  console.log(`Body: ${body}`);
 };
 
 const list = () => {
