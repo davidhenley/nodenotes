@@ -20,6 +20,9 @@ switch (command) {
   case 'remove':
     notes.remove(argv.title);
     break;
+  case 'remove-all':
+    notes.removeAll();
+    break;
   default:
     console.log('Command not recognized');
 }
